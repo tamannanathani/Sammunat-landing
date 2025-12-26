@@ -1,0 +1,64 @@
+/* Compact footer belt */
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #111111 100%);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(149, 131, 220, 0.15);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
+  /* improved text rendering for footer */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.footer p::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, #5227ff, #ff9ffc);
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  margin-bottom: 2px;
+  /* added animation to footer accent */
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* new animation for footer accent */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer p {
+    font-size: 0.95rem;
+  }
+}

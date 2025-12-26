@@ -1,0 +1,121 @@
+/* Feature cards with modern glass morphism and hover effects */
+.features {
+  padding: 3rem 4rem;
+  background: linear-gradient(180deg, #f0ebff 0%, #f9fafb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  /* improved text rendering for headings */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(149, 131, 220, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  /* added subtle gradient background to cards */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 235, 255, 0.5) 100%);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5227ff, #ff9ffc);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(82, 39, 255, 0.15);
+  border-color: rgba(149, 131, 220, 0.4);
+  /* enhanced hover background for better visibility */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 235, 255, 0.8) 100%);
+}
+
+.card-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #5227ff 0%, #ff9ffc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* improved text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  /* improved paragraph spacing */
+  letter-spacing: 0.3px;
+}
+
+.card p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 4rem 2rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-grid {
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card-header {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
