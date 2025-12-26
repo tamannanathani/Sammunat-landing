@@ -73,12 +73,6 @@
   box-shadow: 0 12px 40px rgba(109, 92, 168, 0.2);
 }
 
-.ps-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  animation: bounce 2s ease-in-out infinite;
-}
 
 .ps-card h3 {
   font-size: 1.5rem;
