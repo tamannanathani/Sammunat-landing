@@ -11,7 +11,6 @@ export default function ProblemSolution() {
         
         <div className="ps-grid">
           <div className="ps-card problem">
-            <div className="ps-icon problem-icon">⚠️</div>
             <h3>The Problem</h3>
             <ul className="ps-list">
               <li>Outdated technology limiting growth</li>
@@ -25,7 +24,6 @@ export default function ProblemSolution() {
           <div className="ps-arrow">→</div>
           
           <div className="ps-card solution">
-            <div className="ps-icon solution-icon">✨</div>
             <h3>Our Solution</h3>
             <ul className="ps-list">
               <li>Modern, cutting-edge technology stack</li>
